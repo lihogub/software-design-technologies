@@ -1,11 +1,16 @@
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/sdt-database
-    username: postgres
-    password: postgres
+    url: jdbc:postgresql://${POSTGRES_HOST}:${POSTGRES_PORT}/${POSTGRES_DB}
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
   jpa:
     show-sql: true
     hibernate:
       ddl-auto: update
     generate-ddl: true
+
+app:
+  jwt:
+    secretKey: ${JWT_SECRET_KEY}
+    expiration: ${JWT_EXPIRATION}
