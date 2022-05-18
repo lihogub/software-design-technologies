@@ -14,3 +14,9 @@ app:
   jwt:
     secretKey: ${JWT_SECRET_KEY}
     expiration: ${JWT_EXPIRATION}
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /docs
